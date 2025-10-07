@@ -65,7 +65,7 @@ class MainActivity : AppCompatActivity() {
         inputMethodManager.hideSoftInputFromWindow(thresholdEditText.windowToken, 0)
     }
 
-    // (второе - по нажатию вне клавиатуры)
+    // (второе - по нажатию вне клавиатуры.)
     private fun setupHideKeyboardOnTouch() {
         findViewById<android.view.View>(android.R.id.content).setOnClickListener {
             hideKeyboard()
