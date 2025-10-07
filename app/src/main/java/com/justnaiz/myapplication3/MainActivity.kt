@@ -59,12 +59,13 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    // Функции для скрытия клавиатуры (первое - по кнопке, второе - по нажатию вне клавиатуры.)
+    // Функции для скрытия клавиатуры (первое - по кнопке)
     private fun hideKeyboard() {
         val inputMethodManager = getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager
         inputMethodManager.hideSoftInputFromWindow(thresholdEditText.windowToken, 0)
     }
 
+    // (второе - по нажатию вне клавиатуры)
     private fun setupHideKeyboardOnTouch() {
         findViewById<android.view.View>(android.R.id.content).setOnClickListener {
             hideKeyboard()
