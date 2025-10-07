@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#2196F3"
+    android:padding="20dp">
+
+    <Space
+    android:layout_width="match_parent"
+    android:layout_height="95dp" />
+
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    android:padding="20dp"
+    android:elevation="8dp"
+    android:outlineProvider="bounds">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Исходный текст:"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:id="@+id/inputTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Текст будет загружен..."
+            android:textSize="14sp"
+            android:textColor="@android:color/black"
+            android:padding="12dp"
+            android:background="#f5f5f5"
+            android:layout_marginBottom="16dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Введите число для сравнения длины слов:"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <EditText
+            android:id="@+id/thresholdEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:textColor="@android:color/black"
+            android:hint="Например: 5"
+            android:textColorHint="#666666"
+            android:backgroundTint="#2196F3"
+            android:layout_marginBottom="16dp" />
+
+        <Button
+            android:id="@+id/processButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="РАЗДЕЛИТЬ СЛОВА"
+            android:layout_marginBottom="16dp"
+            android:minHeight="48dp"
+            android:backgroundTint="#2196F3"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#e0e0e0"
+            android:layout_marginBottom="16dp" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Результаты:"
+            android:textSize="18sp"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="200dp">
+
+            <TextView
+                android:id="@+id/resultTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Результаты появятся здесь после нажатия кнопки"
+                android:textSize="14sp"
+                android:textColor="@android:color/black"
+                android:padding="12dp"
+                android:background="#fafafa"
+                android:lineSpacingExtra="4dp" />
+        </ScrollView>
+
+    </LinearLayout>
+
+</LinearLayout>
